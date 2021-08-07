@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  background: url('bg.jpg');
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 450px;
+  text-align: center;
+  -webkit-box-shadow: 0px 10px 16px 6px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 10px 16px 6px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 10px 16px 6px rgba(34, 60, 80, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.container h1 {
+  font-weight: 400;
+}
+
+.container .image-container {
+  height: 200px;
+  width: 200px;
+}
+
+.image-container img {
+  height: inherit;
+  border-radius: 50%;
+  width: inherit;
+  object-fit: cover;
+  animation: rotateImage 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.container.play .image-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.time-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-progress {
+  width: 80%;
+}
+
+.progress-container {
+  height: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 200px;
+  margin: auto;
+}
+
+.progress {
+  height: inherit;
+  width: 0;
+  background-color: tomato;
+  border-radius: inherit;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  margin: auto 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.8;
+}
+
+.big {
+  font-size: 2.2rem;
+}
